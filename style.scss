@@ -7,7 +7,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 body {
-	background: url('./img/matrix.jpg');
+	background: linear-gradient(
+			to top,
+			rgba(22, 22, 22, 0.8) 0%,
+			rgba(21, 21, 21, 0.8) 100%
+		),
+		url('./img/matrix.jpg');
 	color: #fff;
 	font-family: 'Montserrat', sans-serif;
 }

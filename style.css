@@ -6,7 +6,7 @@
 }
 
 body {
-  background: url("./img/matrix.jpg");
+  background: linear-gradient(to top, rgba(22, 22, 22, 0.8) 0%, rgba(21, 21, 21, 0.8) 100%), url("./img/matrix.jpg");
   color: #fff;
   font-family: "Montserrat", sans-serif;
 }
