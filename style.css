@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "Furore";
+  src: url(./font/Furore.otf);
+  font-weight: 400;
+}
 body {
   background: linear-gradient(to top, rgba(22, 22, 22, 0.8) 0%, rgba(21, 21, 21, 0.8) 100%), url("./img/matrix.jpg");
   color: #fff;
@@ -18,6 +23,11 @@ body {
 
 .section__title {
   text-align: center;
+  color: rgba(217, 217, 217, 0);
+  -webkit-text-stroke: 1px #77f67a;
+  font-family: "Furore";
+  font-weight: 400;
+  font-size: 45px;
 }
 
 .btn {
@@ -40,19 +50,87 @@ a {
 }
 
 .wrapper {
-  padding-top: 30px;
+  max-width: 400px;
+  padding: 30px 0 450px;
+  position: relative;
+}
+.wrapper__subtitle {
+  margin: 40px auto;
+  text-align: center;
+  padding: 8px 25px;
+  background: #003300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 160px;
+  border-radius: 8px;
+  text-transform: uppercase;
 }
 .wrapper__title {
-  text-align: center;
+  position: absolute;
+  top: 100px;
+  width: 100%;
 }
 .wrapper__img {
-  width: 100%;
+  width: 105%;
+  z-index: 10;
+  position: absolute;
+  top: 230px;
+  overflow: hidden;
+}
+.wrapper__long {
+  text-align: center;
+  font-family: "Furore";
+  font-weight: 400;
+  font-size: 20px;
+  color: rgba(217, 217, 217, 0);
+  -webkit-text-stroke: 1px #77f67a;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.wrapper__both {
+  display: flex;
+  justify-content: center;
+  gap: 220px;
+  align-items: center;
+  color: rgba(217, 217, 217, 0);
+  -webkit-text-stroke: 1px #77f67a;
+  font-family: "Furore";
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 200px;
+}
+.wrapper__both p {
+  max-width: 80px;
 }
 .wrapper__btn {
   border-radius: 10px;
   color: #000;
   text-transform: uppercase;
-  max-width: 400px;
+  max-width: 380px;
+  width: 100%;
+  margin-top: 310px;
+  z-index: 99;
+  position: absolute;
+  left: 10%;
+  transform: translateX(-5%);
+  font-size: 32px;
+  padding: 30px;
+}
+.wrapper__btn::before {
+  content: url("./img/blue.png");
+  position: absolute;
+  left: -10%;
+  top: -70%;
+}
+.wrapper__btn::after {
+  content: url("./img/red.png");
+  position: absolute;
+  right: -6%;
+  bottom: -70%;
+  overflow: hidden;
 }
 
 .about {
@@ -80,7 +158,8 @@ a {
   gap: 10px;
   width: 80%;
   margin: 0 auto;
-  background: #000;
+  background: rgba(25, 25, 25, 0.8);
+  padding: 10px;
 }
 .about__box img {
   width: 100px;
@@ -101,11 +180,40 @@ a {
   gap: 20px 12px;
 }
 .work__box {
+  font-family: "Furore";
+  font-weight: 400;
+  font-size: 24px;
   flex-basis: 100%;
   border: 1px solid #2ef32f;
+  height: 120px;
+  position: relative;
+  padding: 5px;
 }
 .work__box_half {
   flex-basis: 48%;
+  height: 145px;
+}
+.work__box__img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.work__box__img_long {
+  width: 100%;
+}
+.work__box_right {
+  display: flex;
+  justify-content: flex-end;
+}
+.work__text_center {
+  text-align: center;
+}
+.work__text_right {
+  text-align: right;
+  max-width: 230px;
+}
+.work__text_left {
+  max-width: 200px;
 }
 
 .program {
@@ -123,22 +231,76 @@ a {
 }
 .program__box {
   width: 100%;
-  border: 3px solid #2ef32f;
+  border-right: 3px solid #2ef32f;
+  border-bottom: 3px solid #2ef32f;
+  padding: 10px 0;
+  position: relative;
+  height: 150px;
+}
+.program__box::after, .program__box::before {
+  content: "";
+  position: absolute;
+  background: #2ef32f;
+}
+.program__box::after {
+  width: 200px;
+  height: 3px;
+  top: 0;
+  right: 0;
+}
+.program__box::before {
+  width: 3px;
+  height: 70px;
+  left: 0;
+  bottom: 0;
+}
+.program__box_green {
+  color: rgb(46, 243, 47);
+}
+.program__box_big {
+  font-size: 45px;
+}
+.program__box__title {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.program__box p {
+  padding-left: 20px;
 }
 
 .result__title {
   margin-bottom: 30px;
+  position: relative;
 }
 .result__text {
   text-align: center;
   width: 80%;
   margin: 0 auto;
+  line-height: 125%;
 }
 .result__text_green {
   color: #2ef32f;
+  padding: 20px 0;
 }
 .result__img {
   width: 100%;
+  position: relative;
+  left: -15%;
+}
+.result__cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.result__cont p {
+  text-align: right;
+  font-size: 20px;
+  padding-right: 25px;
+}
+.result__cont img {
+  width: 50%;
+  padding: 10px 0;
 }
 
 .variant_label {

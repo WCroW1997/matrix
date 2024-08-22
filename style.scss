@@ -4,6 +4,12 @@
 	box-sizing: border-box;
 }
 
+@font-face {
+	font-family: 'Furore';
+	src: url(./font/Furore.otf);
+	font-weight: 400;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 body {
@@ -27,6 +33,11 @@ body {
 
 	&__title {
 		text-align: center;
+		color: rgba(217, 217, 217, 0);
+		-webkit-text-stroke: 1px #77f67a;
+		font-family: 'Furore';
+		font-weight: 400;
+		font-size: 45px;
 	}
 }
 
@@ -55,13 +66,67 @@ a {
 
 .wrapper {
 	// .wrapper__title
-	padding-top: 30px;
-	&__title {
+	max-width: 400px;
+	padding: 30px 0 450px;
+	position: relative;
+
+	&__subtitle {
+		margin: 40px auto;
 		text-align: center;
+		padding: 8px 25px;
+		background: #003300;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		max-width: 160px;
+		border-radius: 8px;
+		text-transform: uppercase;
+	}
+
+	&__title {
+		position: absolute;
+		top: 100px;
+		width: 100%;
 	}
 
 	&__img {
-		width: 100%;
+		width: 105%;
+		z-index: 10;
+		position: absolute;
+		top: 230px;
+		// left: -10%;
+		overflow: hidden;
+		// right: 50%;
+	}
+
+	&__long {
+		text-align: center;
+		font-family: 'Furore';
+		font-weight: 400;
+		font-size: 20px;
+		color: rgba(217, 217, 217, 0);
+		-webkit-text-stroke: 1px #77f67a;
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+	}
+
+	&__both {
+		display: flex;
+		justify-content: center;
+		gap: 220px;
+		align-items: center;
+		color: rgba(217, 217, 217, 0);
+		-webkit-text-stroke: 1px #77f67a;
+		font-family: 'Furore';
+		font-weight: 400;
+		font-size: 20px;
+		text-align: center;
+		margin-top: 200px;
+
+		& p {
+			max-width: 80px;
+		}
 	}
 
 	&__btn {
@@ -69,7 +134,30 @@ a {
 		// padding: 10px;
 		color: #000;
 		text-transform: uppercase;
-		max-width: 400px;
+		max-width: 380px;
+		width: 100%;
+		margin-top: 310px;
+		z-index: 99;
+		position: absolute;
+		left: 10%;
+		transform: translateX(-5%);
+		font-size: 32px;
+		padding: 30px;
+
+		&::before {
+			content: url('./img/blue.png');
+			position: absolute;
+			left: -10%;
+			top: -70%;
+		}
+
+		&::after {
+			content: url('./img/red.png');
+			position: absolute;
+			right: -6%;
+			bottom: -70%;
+			overflow: hidden;
+		}
 	}
 }
 
@@ -108,7 +196,8 @@ a {
 		gap: 10px;
 		width: 80%;
 		margin: 0 auto;
-		background: #000;
+		background: rgba(25, 25, 25, 0.8);
+		padding: 10px;
 
 		img {
 			width: 100px;
@@ -123,8 +212,8 @@ a {
 	padding-top: 80px;
 	// .work__title
 
-	&__title {
-	}
+	// &__title {
+	// }
 
 	// .work__boxes
 
@@ -139,11 +228,48 @@ a {
 	// .work__box
 
 	&__box {
+		font-family: 'Furore';
+		font-weight: 400;
+		font-size: 24px;
 		flex-basis: 100%;
 		border: 1px solid #2ef32f;
+		height: 120px;
+		position: relative;
+		padding: 5px;
 
 		&_half {
 			flex-basis: 48%;
+			height: 145px;
+		}
+
+		&__img {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+
+			&_long {
+				width: 100%;
+			}
+		}
+
+		&_right {
+			display: flex;
+			justify-content: flex-end;
+		}
+	}
+
+	&__text {
+		&_center {
+			text-align: center;
+		}
+
+		&_right {
+			text-align: right;
+			max-width: 230px;
+		}
+
+		&_left {
+			max-width: 200px;
 		}
 	}
 }
@@ -169,7 +295,50 @@ a {
 
 	&__box {
 		width: 100%;
-		border: 3px solid #2ef32f;
+		border-right: 3px solid #2ef32f;
+		border-bottom: 3px solid #2ef32f;
+		padding: 10px 0;
+		position: relative;
+		height: 150px;
+
+		&::after,
+		&::before {
+			content: '';
+			position: absolute;
+			background: #2ef32f;
+		}
+
+		&::after {
+			width: 200px;
+			height: 3px;
+			top: 0;
+			right: 0;
+		}
+
+		&::before {
+			width: 3px;
+			height: 70px;
+			left: 0;
+			bottom: 0;
+		}
+
+		&_green {
+			color: rgb(46, 243, 47);
+		}
+
+		&_big {
+			font-size: 45px;
+		}
+
+		&__title {
+			display: flex;
+			align-items: center;
+			gap: 5px;
+		}
+
+		p {
+			padding-left: 20px;
+		}
 	}
 }
 .result {
@@ -177,20 +346,43 @@ a {
 
 	&__title {
 		margin-bottom: 30px;
+		position: relative;
 	}
 
 	&__text {
 		text-align: center;
 		width: 80%;
 		margin: 0 auto;
+		line-height: 125%;
 
 		&_green {
 			color: #2ef32f;
+			padding: 20px 0;
 		}
 	}
 
 	&__img {
 		width: 100%;
+		position: relative;
+		left: -15%;
+	}
+
+	&__cont {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		// padding: 10px;
+
+		p {
+			text-align: right;
+			font-size: 20px;
+			padding-right: 25px;
+		}
+
+		img {
+			width: 50%;
+			padding: 10px 0;
+		}
 	}
 }
 .variant {
