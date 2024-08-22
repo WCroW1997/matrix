@@ -17,7 +17,7 @@ body {
 }
 
 .container {
-  max-width: 400px;
+  max-width: 360px;
   margin: 0 auto;
 }
 
@@ -50,8 +50,8 @@ a {
 }
 
 .wrapper {
-  max-width: 400px;
-  padding: 30px 0 450px;
+  max-width: 360px;
+  padding: 30px 0 380px;
   position: relative;
 }
 .wrapper__subtitle {
@@ -72,10 +72,10 @@ a {
   width: 100%;
 }
 .wrapper__img {
-  width: 105%;
+  width: 104%;
   z-index: 10;
   position: absolute;
-  top: 230px;
+  top: 210px;
   overflow: hidden;
 }
 .wrapper__long {
@@ -92,7 +92,7 @@ a {
 .wrapper__both {
   display: flex;
   justify-content: center;
-  gap: 220px;
+  gap: 170px;
   align-items: center;
   color: rgba(217, 217, 217, 0);
   -webkit-text-stroke: 1px #77f67a;
@@ -110,13 +110,13 @@ a {
   color: #000;
   text-transform: uppercase;
   max-width: 380px;
-  width: 100%;
-  margin-top: 310px;
+  width: 95%;
+  margin-top: 240px;
   z-index: 99;
   position: absolute;
   left: 10%;
   transform: translateX(-5%);
-  font-size: 32px;
+  font-size: 30px;
   padding: 30px;
 }
 .wrapper__btn::before {
@@ -128,8 +128,8 @@ a {
 .wrapper__btn::after {
   content: url("./img/red.png");
   position: absolute;
-  right: -6%;
-  bottom: -70%;
+  right: -4%;
+  bottom: -80%;
   overflow: hidden;
 }
 
@@ -142,7 +142,7 @@ a {
 .about__main {
   border: 1px solid #fff;
   text-align: center;
-  width: 80%;
+  width: 90%;
   margin: 0 auto 30px;
   padding: 30px 10px;
 }
@@ -156,7 +156,7 @@ a {
   justify-content: space-between;
   align-items: center;
   gap: 10px;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   background: rgba(25, 25, 25, 0.8);
   padding: 10px;
@@ -177,12 +177,12 @@ a {
   flex-wrap: wrap;
   width: 80%;
   margin: 30px auto;
-  gap: 20px 12px;
+  gap: 20px 11px;
 }
 .work__box {
   font-family: "Furore";
   font-weight: 400;
-  font-size: 24px;
+  font-size: 20px;
   flex-basis: 100%;
   border: 1px solid #2ef32f;
   height: 120px;
@@ -191,7 +191,7 @@ a {
 }
 .work__box_half {
   flex-basis: 48%;
-  height: 145px;
+  height: 130px;
 }
 .work__box__img {
   position: absolute;
@@ -213,7 +213,7 @@ a {
   max-width: 230px;
 }
 .work__text_left {
-  max-width: 200px;
+  max-width: 150px;
 }
 
 .program {
